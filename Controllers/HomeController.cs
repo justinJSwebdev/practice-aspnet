@@ -4,10 +4,10 @@ namespace b.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        [Route("register")]
+        public IActionResult Index(Person person)
         {
-            return Json("Hello");
+            return Json(person.ToString());
         }
-  
     }
 }

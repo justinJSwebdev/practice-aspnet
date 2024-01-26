@@ -17,14 +17,12 @@ namespace b
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.MapControllers(); //useRouting + use Endpoints
             app.UseAuthorization();
-           
             app.MapRazorPages();
-
             app.Run();
         }
     }
